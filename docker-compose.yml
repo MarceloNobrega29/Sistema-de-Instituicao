@@ -1,0 +1,31 @@
+
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_aluno_online_2025_1
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: aluno_online
+    ports:
+      - "5432:5432"
+    networks:
+      - aluno_online_network
+    restart: unless-stopped
+
+  cloudbeaver:
+    image: dbeaver/cloudbeaver:latest
+    container_name: dbeaver_aluno_online
+    depends_on:
+      - postgres
+    ports:
+      - "15432:8978"
+    networks:
+      - aluno_online_network
+    restart: unless-stopped
+
+networks:
+  aluno_online_network:
+    driver: bridge
