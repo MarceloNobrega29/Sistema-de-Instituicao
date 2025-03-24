@@ -20,6 +20,4 @@ public class AlunoController {
         public void criarAluno (@RequestBody Aluno aluno){
                 alunoService.criarAluno(aluno);
         }
-
-
 }
