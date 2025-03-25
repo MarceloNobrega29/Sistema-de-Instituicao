@@ -1,15 +1,13 @@
-version: '3.8'
-
 services:
   postgres:
-    image: postgres:15
-    container_name: postgres_aluno_online_2025_1
+    image: postgres:17
+    container_name: postgres_aluno_online_p3b
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 0998635
-      POSTGRES_DB: aluno_online_2025_1
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: postgres_aluno_online_p3b
     ports:
-      - "5432:5432"
+      - "5433:5432"
     networks:
       - aluno_online_network
     restart: unless-stopped
@@ -20,7 +18,7 @@ services:
     depends_on:
       - postgres
     ports:
-      - "15432:8978"
+      - "15434:8978"
     networks:
       - aluno_online_network
     restart: unless-stopped
