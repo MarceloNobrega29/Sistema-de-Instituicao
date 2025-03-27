@@ -18,7 +18,6 @@ public class AlunoController {
 
         @PostMapping
         @ResponseStatus(HttpStatus.CREATED)
-
         public void criarAluno(@RequestBody Aluno aluno) {
                 alunoService.criarAluno(aluno);
         }
@@ -39,9 +38,13 @@ public class AlunoController {
         @PutMapping("/{id}")
         @ResponseStatus(HttpStatus.OK)
         public void atualizarAluno(@PathVariable("id") Long id, @RequestBody Aluno aluno) {
-                aluno.setId(id);
                 alunoService.atualizarAluno(id, aluno);
         }
 
+        @GetMapping
+        @ResponseStatus(HttpStatus.OK)
+        public List<Aluno> buscar(@RequestParam("nome") String nome) {
+                return alunoService.buscarAluno(nome);
+        }
 
 }
