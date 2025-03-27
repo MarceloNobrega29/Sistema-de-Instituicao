@@ -1,17 +1,17 @@
-# 📚 Projeto Aluno Online (CRUD - Create)
+# 📚 Projeto Aluno Online (CRUD)
 ![Image](https://github.com/user-attachments/assets/69fb8277-904a-4f24-b51f-100573c49eea)
 ![Image](https://github.com/user-attachments/assets/bd21a889-422b-48ad-9068-ac26a35a7671)
 
-Este repositório contém uma API RESTful para gerenciamento de alunos, desenvolvida em **Spring Boot** com operações CRUD. Nesta versão, está implementado o endpoint de criação de alunos (`createAluno`).
-
+Este repositório contém uma API RESTful para gerenciamento de alunos, desenvolvida em **Spring Boot** com operações CRUD. 
 ## 🛠 Tecnologias Utilizadas
 - **Java 17**
-- **Spring Boot 3.x**
+- **Spring Boot 3.4.3**
 - **Spring Data JPA**
-- **PostgreSQL** (ou outro banco de dados configurável)
+- **Lombok**
+- **PostgreSQL** 
 - **Maven** (gerenciamento de dependências)
-- **Insomnia/Postman** (testes de API)
-- **CloudBeaver** (gerenciamento do banco de dados)
+- **Postman** (testes de API)
+- **CloudBeaver** (gerenciamento do banco de dados via docker)
 
 ## 📌 Endpoints Implementados
 
@@ -20,6 +20,9 @@ Cria um novo aluno no banco de dados.
 
 ### 🔎 Buscar Aluno por ID (GET /alunos/{id})
 Retorna um aluno específico pelo ID.
+
+### 🔎 Buscar Aluno pelo Nome 
+Retorna alguns alunos especificos pelo Nome.
 
 ### ✏️ Atualizar Aluno (PUT /alunos/{id})
 Atualiza os dados de um aluno existente.
@@ -30,17 +33,25 @@ Remove um aluno do sistema.
 #### Request (Postman):
 
 **Método:** POST  
+
 **URL:** `http://localhost:8080/alunos`  
 
 **Método:** PUT  
+
 **URL:** `http://localhost:8080/alunos/:id`
 
-**Método:** GET  
+**Método:** GET ID
+
 **URL:** `http://localhost:8080/alunos/:id`
+
+**Método:** GET NOME
+
+**URL:** `http://localhost:8080/alunos?nome=`
 
 **Método:** DELETE  
-**URL:** `http://localhost:8080/alunos/:id`
 
+**URL:** `http://localhost:8080/alunos/:id`
+#
 # 🚀 Como Executar o Projeto
 
 ## Pré-requisitos:
@@ -48,12 +59,14 @@ Remove um aluno do sistema.
 - **JDK 17**
 
 - **Maven 3.8+**
-
+  
+- **Posteman (Request e JSON)**
+  
 - **Docker (para o CloudBeaver)**
 
 # Clone o repositório:
 
-- git clone https://github.com/seu-usuario/aluno-online.git
+- git clone https://github.com/MarceloNobrega29/Sistema-de-Instituicao.git
 
 # Configure o banco de dados:
 
