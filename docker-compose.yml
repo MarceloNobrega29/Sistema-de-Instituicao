@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres:17
+    image: postgres:15
     container_name: postgres_aluno_online_p3b
     environment:
       POSTGRES_USER: postgres
@@ -18,7 +18,7 @@ services:
     depends_on:
       - postgres
     ports:
-      - "15434:8978"
+      - "15432:8978"
     networks:
       - aluno_online_network
     restart: unless-stopped
