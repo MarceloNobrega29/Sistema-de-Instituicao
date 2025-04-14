@@ -43,4 +43,8 @@ public class AlunoService {
         return alunoRepository.findByNomeContaining(nome);
     }
 
+    public List<Aluno> listarTodosAlunos() {
+        return alunoRepository.findAll();
+    }
+
 }

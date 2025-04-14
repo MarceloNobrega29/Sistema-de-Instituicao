@@ -36,15 +36,21 @@ public class AlunoController {
         }
 
         @PutMapping("/{id}")
-        @ResponseStatus(HttpStatus.OK)
+        @ResponseStatus(HttpStatus.NO_CONTENT)
         public void atualizarAluno(@PathVariable("id") Long id, @RequestBody Aluno aluno) {
                 alunoService.atualizarAluno(id, aluno);
         }
 
-        @GetMapping
+        @GetMapping("/buscar/nome")
         @ResponseStatus(HttpStatus.OK)
         public List<Aluno> buscar(@RequestParam("nome") String nome) {
                 return alunoService.buscarAluno(nome);
+        }
+
+        @GetMapping
+        @ResponseStatus(HttpStatus.OK)
+        public List<Aluno> listarTodosAlunos() {
+                return alunoService.listarTodosAlunos();
         }
 
 }
