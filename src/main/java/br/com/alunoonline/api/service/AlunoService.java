@@ -20,15 +20,15 @@ public class AlunoService {
         alunoRepository.save(aluno);
     }
 
-    public Optional<Aluno> buscarPorId(Long id) {
+    public Optional<Aluno> buscarAlunoPorId(Long id) {
         return alunoRepository.findById(id);
     }
 
-    public void deletarAluno(Long id) {
+    public void deletarAlunoPorId(Long id) {
         alunoRepository.deleteById(id);
     }
 
-    public void atualizarAluno(Long id, Aluno aluno) {
+    public void atualizarAlunoPorId(Long id, Aluno aluno) {
         Aluno alunoExistente = alunoRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Aluno não encontrado"));
 
@@ -39,7 +39,7 @@ public class AlunoService {
         alunoRepository.save(alunoExistente);
     }
 
-    public List<Aluno> buscarAluno(String nome) {
+    public List<Aluno> buscarAlunoPeloNome(String nome) {
         return alunoRepository.findByNomeContaining(nome);
     }
 

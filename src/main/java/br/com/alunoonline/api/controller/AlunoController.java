@@ -24,27 +24,27 @@ public class AlunoController {
 
         @GetMapping("/{id}")
         @ResponseStatus(HttpStatus.OK)
-        public Optional<Aluno> obterPorId(@PathVariable Long id) {
-            return alunoService.buscarPorId(id);
+        public Optional<Aluno> buscarAlunoPorId(@PathVariable Long id) {
+            return alunoService.buscarAlunoPorId(id);
 
         }
 
         @DeleteMapping(("/{id}"))
         @ResponseStatus(HttpStatus.OK)
-        public void deletar(@PathVariable Long id) {
-            alunoService.deletarAluno(id);
+        public void deletarAlunoPorId(@PathVariable Long id) {
+            alunoService.deletarAlunoPorId(id);
         }
 
         @PutMapping("/{id}")
         @ResponseStatus(HttpStatus.NO_CONTENT)
-        public void atualizarAluno(@PathVariable("id") Long id, @RequestBody Aluno aluno) {
-                alunoService.atualizarAluno(id, aluno);
+        public void atualizarAlunoPorId(@PathVariable("id") Long id, @RequestBody Aluno aluno) {
+                alunoService.atualizarAlunoPorId(id, aluno);
         }
 
         @GetMapping("/buscar/nome")
         @ResponseStatus(HttpStatus.OK)
-        public List<Aluno> buscar(@RequestParam("nome") String nome) {
-                return alunoService.buscarAluno(nome);
+        public List<Aluno> buscarAlunoPeloNome(@RequestParam("nome") String nome) {
+                return alunoService.buscarAlunoPeloNome(nome);
         }
 
         @GetMapping
