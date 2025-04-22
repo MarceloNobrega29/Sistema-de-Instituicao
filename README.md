@@ -20,16 +20,16 @@ Este repositório contém uma API RESTful para gerenciamento de alunos, desenvol
 ## 📌 Endpoints Implementados
 
 ### 🔹 Criar Aluno (`POST /alunos`)
-Cria um novo aluno no banco de dados.
+Cria um novo alunoModel no banco de dados.
 
 ### 🔎 Buscar Aluno por ID (GET /alunos/{id})
-Retorna um aluno específico pelo ID.
+Retorna um alunoModel específico pelo ID.
 
 ### ✏️ Atualizar Aluno (PUT /alunos/{id})
-Atualiza os dados de um aluno existente.
+Atualiza os dados de um alunoModel existente.
 
 ### 🗑️ Deletar Aluno (DELETE /alunos/{id})
-Remove um aluno do sistema.
+Remove um alunoModel do sistema.
 
 #### Request (Postman):
 
@@ -57,7 +57,7 @@ Remove um aluno do sistema.
 
 # Clone o repositório:
 
-- git clone https://github.com/seu-usuario/aluno-online.git
+- git clone https://github.com/seu-usuario/alunoModel-online.git
 
 # Configure o banco de dados:
 

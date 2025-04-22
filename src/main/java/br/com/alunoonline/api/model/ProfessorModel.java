@@ -1,26 +1,28 @@
 package br.com.alunoonline.api.model;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "aluno")
+@Table(name = "professor")
 @Entity
-public class Aluno {
+public class ProfessorModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private Long id;
+    private Long idProfessor;
 
-    private String nome;
+    private String nomeProfessor;
 
-    private String cpf;
+    private String cpfProfessor;
 
     private String email;
-
+    
 }

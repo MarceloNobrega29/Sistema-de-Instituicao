@@ -1,6 +1,6 @@
 package br.com.alunoonline.api.service;
 
-import br.com.alunoonline.api.model.Aluno;
+import br.com.alunoonline.api.model.AlunoModel;
 import br.com.alunoonline.api.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,11 +16,11 @@ public class AlunoService {
     @Autowired
     AlunoRepository alunoRepository;
 
-    public void criarAluno(Aluno aluno) {
-        alunoRepository.save(aluno);
+    public void criarAluno(AlunoModel alunoModel) {
+        alunoRepository.save(alunoModel);
     }
 
-    public Optional<Aluno> buscarAlunoPorId(Long id) {
+    public Optional<AlunoModel> buscarAlunoPorId(Long id) {
         return alunoRepository.findById(id);
     }
 
@@ -28,18 +28,18 @@ public class AlunoService {
         alunoRepository.deleteById(id);
     }
 
-    public void atualizarAlunoPorId(Long id, Aluno aluno) {
-        Aluno alunoExistente = alunoRepository.findById(id)
+    public void atualizarAlunoPorId(Long id, AlunoModel alunoModel) {
+        AlunoModel alunoModelExistente = alunoRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Aluno não encontrado"));
 
-        alunoExistente.setNome(aluno.getNome());
-        alunoExistente.setCpf(aluno.getCpf());
-        alunoExistente.setEmail(aluno.getEmail());
+        alunoModelExistente.setNome(alunoModel.getNome());
+        alunoModelExistente.setCpf(alunoModel.getCpf());
+        alunoModelExistente.setEmail(alunoModel.getEmail());
 
-        alunoRepository.save(alunoExistente);
+        alunoRepository.save(alunoModelExistente);
     }
 
-    public List<Aluno> listarTodosAlunos() {
+    public List<AlunoModel> listarTodosAlunos() {
         return alunoRepository.findAll();
     }
 

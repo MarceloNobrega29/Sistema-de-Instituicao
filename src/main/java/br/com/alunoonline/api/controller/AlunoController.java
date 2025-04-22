@@ -1,6 +1,6 @@
 package br.com.alunoonline.api.controller;
 
-import br.com.alunoonline.api.model.Aluno;
+import br.com.alunoonline.api.model.AlunoModel;
 import br.com.alunoonline.api.service.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,13 +18,13 @@ public class AlunoController {
 
         @PostMapping
         @ResponseStatus(HttpStatus.CREATED)
-        public void criarAluno(@RequestBody Aluno aluno) {
-                alunoService.criarAluno(aluno);
+        public void criarAluno(@RequestBody AlunoModel alunoModel) {
+                alunoService.criarAluno(alunoModel);
         }
 
         @GetMapping("/{id}")
         @ResponseStatus(HttpStatus.OK)
-        public Optional<Aluno> buscarAlunoPorId(@PathVariable Long id) {
+        public Optional<AlunoModel> buscarAlunoPorId(@PathVariable Long id) {
             return alunoService.buscarAlunoPorId(id);
 
         }
@@ -37,13 +37,13 @@ public class AlunoController {
 
         @PutMapping("/{id}")
         @ResponseStatus(HttpStatus.NO_CONTENT)
-        public void atualizarAlunoPorId(@PathVariable("id") Long id, @RequestBody Aluno aluno) {
-                alunoService.atualizarAlunoPorId(id, aluno);
+        public void atualizarAlunoPorId(@PathVariable("id") Long id, @RequestBody AlunoModel alunoModel) {
+                alunoService.atualizarAlunoPorId(id, alunoModel);
         }
 
         @GetMapping
         @ResponseStatus(HttpStatus.OK)
-        public List<Aluno> listarTodosAlunos() {
+        public List<AlunoModel> listarTodosAlunos() {
                 return alunoService.listarTodosAlunos();
         }
 
