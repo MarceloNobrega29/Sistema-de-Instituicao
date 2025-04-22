@@ -20,5 +20,9 @@ public class ProfessorService {
     public Optional<ProfessorModel> buscarProfessorPorId(Long idProfessor) {
         return professorRepository.findById(idProfessor);
     }
+
+    public void deletarProfessorPorId(Long idProfessor) {
+        professorRepository.deleteById(idProfessor);
+    }
     
 }
