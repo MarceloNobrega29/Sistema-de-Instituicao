@@ -23,6 +23,6 @@ public class ProfessorModel {
 
     private String cpfProfessor;
 
-    private String email;
-    
+    private String emailProfessor;
+
 }

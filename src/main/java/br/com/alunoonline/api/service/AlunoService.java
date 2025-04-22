@@ -33,7 +33,6 @@ public class AlunoService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Aluno não encontrado"));
 
         alunoModelExistente.setNome(alunoModel.getNome());
-        alunoModelExistente.setCpf(alunoModel.getCpf());
         alunoModelExistente.setEmail(alunoModel.getEmail());
 
         alunoRepository.save(alunoModelExistente);
