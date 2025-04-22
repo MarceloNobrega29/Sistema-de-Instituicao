@@ -11,5 +11,7 @@ public class ProfessorService {
     @Autowired
     ProfessorRepository professorRepository;
 
-  
+    public void criarProfessor(ProfessorModel professorModel) {
+        professorRepository.save(professorModel);
+    }
 }
