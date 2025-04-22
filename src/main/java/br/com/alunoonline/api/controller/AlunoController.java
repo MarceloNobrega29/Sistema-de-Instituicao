@@ -41,12 +41,6 @@ public class AlunoController {
                 alunoService.atualizarAlunoPorId(id, aluno);
         }
 
-        @GetMapping("/buscar/nome")
-        @ResponseStatus(HttpStatus.OK)
-        public List<Aluno> buscarAlunoPeloNome(@RequestParam("nome") String nome) {
-                return alunoService.buscarAlunoPeloNome(nome);
-        }
-
         @GetMapping
         @ResponseStatus(HttpStatus.OK)
         public List<Aluno> listarTodosAlunos() {

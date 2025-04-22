@@ -39,10 +39,6 @@ public class AlunoService {
         alunoRepository.save(alunoExistente);
     }
 
-    public List<Aluno> buscarAlunoPeloNome(String nome) {
-        return alunoRepository.findByNomeContaining(nome);
-    }
-
     public List<Aluno> listarTodosAlunos() {
         return alunoRepository.findAll();
     }
