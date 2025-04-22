@@ -1,10 +1,5 @@
 # 📚 Projeto Aluno Online (CRUD - Create)
 
-![Image](https://github.com/user-attachments/assets/cfcec220-e37c-4cac-9da2-dd52a9e646d0)
-![Image](https://github.com/user-attachments/assets/f03b60ba-f73d-4a46-bede-140af010d072)
-![Image](https://github.com/user-attachments/assets/d8345046-acca-4431-a181-04172f61658f)
-![Image](https://github.com/user-attachments/assets/644a246e-c32d-4eb2-89f1-6d3c05f9e67c)
-
 
 Este repositório contém uma API RESTful para gerenciamento de alunos, desenvolvida em **Spring Boot** com operações CRUD. Nesta versão, está implementado o endpoint de criação de alunos (`createAluno`).
 
