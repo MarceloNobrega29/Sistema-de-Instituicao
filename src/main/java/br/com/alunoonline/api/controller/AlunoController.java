@@ -22,23 +22,23 @@ public class AlunoController {
                 alunoService.criarAluno(alunoModel);
         }
 
-        @GetMapping("/{id}")
+        @GetMapping("/{idAluno}")
         @ResponseStatus(HttpStatus.OK)
-        public Optional<AlunoModel> buscarAlunoPorId(@PathVariable Long id) {
-            return alunoService.buscarAlunoPorId(id);
+        public Optional<AlunoModel> buscarAlunoPorId(@PathVariable Long idAluno) {
+            return alunoService.buscarAlunoPorId(idAluno);
 
         }
 
-        @DeleteMapping(("/{id}"))
+        @DeleteMapping(("/{idAluno}"))
         @ResponseStatus(HttpStatus.OK)
-        public void deletarAlunoPorId(@PathVariable Long id) {
-            alunoService.deletarAlunoPorId(id);
+        public void deletarAlunoPorId(@PathVariable Long idAluno) {
+            alunoService.deletarAlunoPorId(idAluno);
         }
 
-        @PutMapping("/{id}")
+        @PutMapping("/{idAluno}")
         @ResponseStatus(HttpStatus.NO_CONTENT)
-        public void atualizarAlunoPorId(@PathVariable("id") Long id, @RequestBody AlunoModel alunoModel) {
-                alunoService.atualizarAlunoPorId(id, alunoModel);
+        public void atualizarAlunoPorId(@PathVariable("idAluno") Long idAluno, @RequestBody AlunoModel alunoModel) {
+                alunoService.atualizarAlunoPorId(idAluno, alunoModel);
         }
 
         @GetMapping

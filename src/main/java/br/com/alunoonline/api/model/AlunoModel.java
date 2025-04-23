@@ -15,12 +15,12 @@ public class AlunoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private Long id;
+    private Long idAluno;
 
-    private String nome;
+    private String nomeAluno;
 
-    private String cpf;
+    private String cpfAluno;
 
-    private String email;
+    private String emailAluno;
 
 }

@@ -20,20 +20,20 @@ public class AlunoService {
         alunoRepository.save(alunoModel);
     }
 
-    public Optional<AlunoModel> buscarAlunoPorId(Long id) {
-        return alunoRepository.findById(id);
+    public Optional<AlunoModel> buscarAlunoPorId(Long idAluno) {
+        return alunoRepository.findById(idAluno);
     }
 
-    public void deletarAlunoPorId(Long id) {
-        alunoRepository.deleteById(id);
+    public void deletarAlunoPorId(Long idAluno) {
+        alunoRepository.deleteById(idAluno);
     }
 
-    public void atualizarAlunoPorId(Long id, AlunoModel alunoModel) {
-        AlunoModel alunoModelExistente = alunoRepository.findById(id)
+    public void atualizarAlunoPorId(Long idAluno, AlunoModel alunoModel) {
+        AlunoModel alunoModelExistente = alunoRepository.findById(idAluno)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Aluno não encontrado"));
 
-        alunoModelExistente.setNome(alunoModel.getNome());
-        alunoModelExistente.setEmail(alunoModel.getEmail());
+        alunoModelExistente.setNomeAluno(alunoModel.getNomeAluno());
+        alunoModelExistente.setEmailAluno(alunoModel.getEmailAluno());
 
         alunoRepository.save(alunoModelExistente);
     }
