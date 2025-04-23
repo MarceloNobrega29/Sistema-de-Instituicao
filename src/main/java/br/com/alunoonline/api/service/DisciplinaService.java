@@ -20,6 +20,10 @@ public class DisciplinaService {
     public Optional<DisciplinaModel> buscarDisciplinaPorId(Long idDisciplina) {
         return disciplinaRepository.findById(idDisciplina);
     }
+
+    public void deletarDisciplinaPorId(Long idDisciplina) {
+        disciplinaRepository.deleteById(idDisciplina);
+    }
     
 
 }
