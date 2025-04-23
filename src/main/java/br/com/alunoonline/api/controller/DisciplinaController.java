@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -38,5 +39,10 @@ public class DisciplinaController {
     public void atualizarDisciplinaPorId(@PathVariable ("idDisciplina") Long idDisciplina, @RequestBody DisciplinaModel disciplinaModel) {
         disciplinaService.atualizarDisciplinaPorId(idDisciplina, disciplinaModel);
     }
-    
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<DisciplinaModel> listarTodasDisciplinas() {
+        return disciplinaService.listarTodasDisciplinas();
+    }
 }
