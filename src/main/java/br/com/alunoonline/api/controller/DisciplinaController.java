@@ -4,10 +4,9 @@ import br.com.alunoonline.api.model.DisciplinaModel;
 import br.com.alunoonline.api.service.DisciplinaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/disciplinas")
@@ -18,8 +17,14 @@ public class DisciplinaController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
-    public void criarDisciplina(DisciplinaModel disciplinaModel) {
+    public void criarDisciplina(@RequestBody DisciplinaModel disciplinaModel) {
         disciplinaService.criarDisciplina(disciplinaModel);
+    }
+
+    @GetMapping("/{idDisciplina}")
+    @ResponseStatus(HttpStatus.OK)
+    public Optional<DisciplinaModel> buscarDisciplinaPorId(@PathVariable Long idDisciplina) {
+        return disciplinaService.buscarDisciplinaPorId(idDisciplina);
     }
     
 
