@@ -26,6 +26,11 @@ public class DisciplinaController {
     public Optional<DisciplinaModel> buscarDisciplinaPorId(@PathVariable Long idDisciplina) {
         return disciplinaService.buscarDisciplinaPorId(idDisciplina);
     }
-    
+
+    @DeleteMapping(("/{idDisciplina}"))
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deletarDisciplinaPorId(@PathVariable Long idDisciplina) {
+        disciplinaService.deletarDisciplinaPorId(idDisciplina);
+    }
 
 }
