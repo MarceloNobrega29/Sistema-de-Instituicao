@@ -5,6 +5,8 @@ import br.com.alunoonline.api.repository.DisciplinaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class DisciplinaService {
 
@@ -13,6 +15,10 @@ public class DisciplinaService {
 
     public void criarDisciplina(DisciplinaModel disciplinaModel) {
         disciplinaRepository.save(disciplinaModel);
+    }
+
+    public Optional<DisciplinaModel> buscarDisciplinaPorId(Long idDisciplina) {
+        return disciplinaRepository.findById(idDisciplina);
     }
     
 
