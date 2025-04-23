@@ -33,4 +33,10 @@ public class DisciplinaController {
         disciplinaService.deletarDisciplinaPorId(idDisciplina);
     }
 
+    @PutMapping("/{idDisciplina}")
+    @ResponseStatus(HttpStatus.OK)
+    public void atualizarDisciplinaPorId(@PathVariable ("idDisciplina") Long idDisciplina, @RequestBody DisciplinaModel disciplinaModel) {
+        disciplinaService.atualizarDisciplinaPorId(idDisciplina, disciplinaModel);
+    }
+    
 }
