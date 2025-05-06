@@ -15,6 +15,7 @@ public class MatriculaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idMatricula;
 
     private Double nota1;
 
