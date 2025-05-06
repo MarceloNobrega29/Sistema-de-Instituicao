@@ -16,5 +16,4 @@ public class MatriculaService {
         matriculaModel.setStatus(MatricukaAlunoStatusEnum.MATRICULADO);
         matriculaRepository.save(matriculaModel);
     }
-    
 }
