@@ -29,7 +29,7 @@ public class AlunoController {
 
         @GetMapping("/{idAluno}")
         @ResponseStatus(HttpStatus.OK)
-        @Operation(summary = "Consultar aluno", description = "Busca um aluno pelo seu ID")
+        @Operation(summary = "Buscar aluno", description = "Busca um aluno pelo por ID")
         @ApiResponse(responseCode = "200", description = "Aluno encontrado")
         public Optional<AlunoModel> buscarAlunoPorId(@PathVariable Long idAluno) {
                 return alunoService.buscarAlunoPorId(idAluno);
@@ -37,7 +37,7 @@ public class AlunoController {
 
         @DeleteMapping(("/{idAluno}"))
         @ResponseStatus(HttpStatus.OK)
-        @Operation(summary = "Excluir aluno", description = "Remove um aluno do sistema pelo ID")
+        @Operation(summary = "Excluir aluno", description = "Remove um aluno do sistema por ID")
         @ApiResponse(responseCode = "200", description = "Aluno excluído com sucesso")
         public void deletarAlunoPorId(@PathVariable Long idAluno) {
                 alunoService.deletarAlunoPorId(idAluno);
@@ -45,7 +45,7 @@ public class AlunoController {
 
         @PutMapping("/{idAluno}")
         @ResponseStatus(HttpStatus.NO_CONTENT)
-        @Operation(summary = "Atualizar aluno", description = "Atualiza os dados de um aluno existente pelo ID")
+        @Operation(summary = "Atualizar aluno", description = "Atualiza os dados de um aluno existente por ID")
         @ApiResponses({
                 @ApiResponse(responseCode = "200", description = "Aluno atualizado com sucesso"),
                 @ApiResponse(responseCode = "404", description = "Aluno não encontrado")

@@ -29,7 +29,7 @@ public class ProfessorController {
 
     @GetMapping("/{idProfessor}")
     @ResponseStatus(HttpStatus.OK)
-    @Operation(summary = "Buscar professor por ID", description = "Obtém os dados de um professor específico")
+    @Operation(summary = "Buscar professor", description = "Obtém os dados de um professor específico por ID")
     @ApiResponse(responseCode = "200", description = "Professor encontrado")
     public Optional<ProfessorModel> buscarProfessorPorId(@PathVariable Long idProfessor) {
         return professorService.buscarProfessorPorId(idProfessor);
@@ -37,7 +37,7 @@ public class ProfessorController {
 
     @DeleteMapping(("/{idProfessor}"))
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @Operation(summary = "Remover professor", description = "Exclui permanentemente um professor do sistema")
+    @Operation(summary = "Remover professor", description = "Exclui permanentemente um professor do sistema por ID")
     @ApiResponse(responseCode = "200", description = "Professor excluído com sucesso")
     public void deletarProfessorPorId(@PathVariable Long idProfessor) {
         professorService.deletarProfessorPorId(idProfessor);
@@ -45,7 +45,7 @@ public class ProfessorController {
 
     @PutMapping("/{idProfessor}")
     @ResponseStatus(HttpStatus.OK)
-    @Operation(summary = "Atualizar professor", description = "Altera os dados cadastrais de um professor")
+    @Operation(summary = "Atualizar professor", description = "Altera os dados cadastrais de um professor por ID")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "Professor atualizado com sucesso"),
             @ApiResponse(responseCode = "404", description = "Professor não encontrado")
