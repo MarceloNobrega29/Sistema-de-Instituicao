@@ -38,7 +38,7 @@ public class ProfessorController {
     @DeleteMapping(("/{idProfessor}"))
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Operation(summary = "Remover professor", description = "Exclui permanentemente um professor do sistema por ID")
-    @ApiResponse(responseCode = "200", description = "Professor excluído com sucesso")
+    @ApiResponse(responseCode = "204", description = "Professor excluído com sucesso")
     public void deletarProfessorPorId(@PathVariable Long idProfessor) {
         professorService.deletarProfessorPorId(idProfessor);
     }

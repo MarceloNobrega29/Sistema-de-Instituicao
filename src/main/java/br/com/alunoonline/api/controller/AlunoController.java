@@ -38,7 +38,7 @@ public class AlunoController {
         @DeleteMapping(("/{idAluno}"))
         @ResponseStatus(HttpStatus.OK)
         @Operation(summary = "Excluir aluno", description = "Remove um aluno do sistema por ID")
-        @ApiResponse(responseCode = "200", description = "Aluno excluído com sucesso")
+        @ApiResponse(responseCode = "204", description = "Aluno excluído com sucesso")
         public void deletarAlunoPorId(@PathVariable Long idAluno) {
                 alunoService.deletarAlunoPorId(idAluno);
         }
