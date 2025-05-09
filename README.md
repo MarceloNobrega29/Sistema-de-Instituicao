@@ -1,10 +1,10 @@
 # 📚 Projeto Aluno Online (CRUD)
 
-![Image](https://github.com/user-attachments/assets/8485df5e-37fa-40d4-ae24-c4668d9ec443)
+![Image](https://github.com/user-attachments/assets/e51759e2-2baf-4bb1-beca-2a9e8cca3fca)
 
-![Image](https://github.com/user-attachments/assets/6add6363-5967-4c3a-8eb8-79c76c4ae446)
+![Image](https://github.com/user-attachments/assets/d0f64b1f-9863-47aa-a92d-f8648b01ff5a)
 
-![Image](https://github.com/user-attachments/assets/5cfd4e39-a71a-4203-b4bb-33459a192c48)
+![Image](https://github.com/user-attachments/assets/cd554f6a-e438-43a9-9167-4dfb5e632d03)
 
 
 
