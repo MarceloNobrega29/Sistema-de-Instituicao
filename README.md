@@ -1,14 +1,14 @@
-# 📚 Projeto Aluno Online (CRUD - Create)
+# 📚 Projeto Aluno Online (CRUD)
+
+![Image](https://github.com/user-attachments/assets/8485df5e-37fa-40d4-ae24-c4668d9ec443)
+
+![Image](https://github.com/user-attachments/assets/6add6363-5967-4c3a-8eb8-79c76c4ae446)
+
+![Image](https://github.com/user-attachments/assets/5cfd4e39-a71a-4203-b4bb-33459a192c48)
 
 
-![Image](https://github.com/user-attachments/assets/8dfe8548-c825-4cf1-9ec2-78d09f12a740)
-![Image](https://github.com/user-attachments/assets/45d0700a-2e23-4285-93f5-ef55b55048b5)
-![Image](https://github.com/user-attachments/assets/ef50bd64-99c4-44e2-82ee-c19c7c95c600)
-![Image](https://github.com/user-attachments/assets/344aa25b-9a71-4e49-a3fc-787af2a60825)
-![Image](https://github.com/user-attachments/assets/cc9f4448-cc09-4426-a520-46ea5251f9e3)
-![Image](https://github.com/user-attachments/assets/be1d97d7-f7e3-4b2e-926e-8f89f9ddd4d7)
 
-Este repositório contém uma API RESTful para gerenciamento de alunos, desenvolvida em **Spring Boot** com operações CRUD. Nesta versão, está implementado o endpoint de criação de alunos (`createAluno`).
+Este repositório contém uma API RESTful para gerenciamento de alunos, desenvolvida em **Spring Boot** com operações CRUD.
 
 ## 🛠 Tecnologias Utilizadas
 - **Java 17**
