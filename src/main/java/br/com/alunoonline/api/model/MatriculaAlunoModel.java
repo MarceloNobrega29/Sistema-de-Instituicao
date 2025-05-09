@@ -1,6 +1,6 @@
 package br.com.alunoonline.api.model;
 
-import br.com.alunoonline.api.enuns.MatricukaAlunoStatusEnum;
+import br.com.alunoonline.api.enuns.MatriculaAlunoStatusEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,7 +22,7 @@ public class MatriculaAlunoModel {
     private Double nota2;
 
     @Enumerated(EnumType.STRING)
-    private MatricukaAlunoStatusEnum status;
+    private MatriculaAlunoStatusEnum status;
 
     @ManyToOne
     @JoinColumn(name = "disciplina_id")

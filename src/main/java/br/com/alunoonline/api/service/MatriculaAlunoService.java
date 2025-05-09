@@ -1,11 +1,10 @@
 package br.com.alunoonline.api.service;
 
-import br.com.alunoonline.api.enuns.MatricukaAlunoStatusEnum;
+import br.com.alunoonline.api.enuns.MatriculaAlunoStatusEnum;
 import br.com.alunoonline.api.model.MatriculaAlunoModel;
 import br.com.alunoonline.api.repository.MatriculaAlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -16,7 +15,7 @@ public class MatriculaAlunoService {
     MatriculaAlunoRepository matriculaAlunoRepository;
 
     public void criarMatricula(MatriculaAlunoModel matriculaAlunoModel) {
-        matriculaAlunoModel.setStatus(MatricukaAlunoStatusEnum.MATRICULADO);
+        matriculaAlunoModel.setStatus(MatriculaAlunoStatusEnum.MATRICULADO);
         matriculaAlunoRepository.save(matriculaAlunoModel);
     }
 
@@ -29,8 +28,8 @@ public class MatriculaAlunoService {
 
         // Só vai deixar trancar, se o estatus ATUAL for MATRICULADO
 
-        if (matriculaAlunoModel.getStatus().equals(MatricukaAlunoStatusEnum.MATRICULADO)) {
-            matriculaAlunoModel.setStatus(MatricukaAlunoStatusEnum.TRANCADO);
+        if (matriculaAlunoModel.getStatus().equals(MatriculaAlunoStatusEnum.MATRICULADO)) {
+            matriculaAlunoModel.setStatus(MatriculaAlunoStatusEnum.TRANCADO);
             matriculaAlunoRepository.save(matriculaAlunoModel);
         } else {
             throw  new ResponseStatusException(HttpStatus.BAD_REQUEST, "Só é possivel trancar com o estatus MATRICULADO.");

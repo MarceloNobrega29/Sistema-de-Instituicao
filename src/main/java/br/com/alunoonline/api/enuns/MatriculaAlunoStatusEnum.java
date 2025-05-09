@@ -1,6 +1,6 @@
 package br.com.alunoonline.api.enuns;
 
-public enum MatricukaAlunoStatusEnum {
+public enum MatriculaAlunoStatusEnum {
     MATRICULADO,
     APROVADO,
     REPROVADO,
