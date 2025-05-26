@@ -6,6 +6,6 @@ import lombok.Data;
 public class AtualizarNotasRequestDTO {
 
     private Double nota1;
-
     private Double nota2;
+
 }

@@ -1,6 +1,7 @@
 package br.com.alunoonline.api.controller;
 
 import br.com.alunoonline.api.dtos.AtualizarNotasRequestDTO;
+import br.com.alunoonline.api.dtos.HistoricoAlunoResponseDTO;
 import br.com.alunoonline.api.model.MatriculaAlunoModel;
 import br.com.alunoonline.api.service.MatriculaAlunoService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -9,6 +10,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/matriculas")
@@ -42,6 +45,6 @@ public class MatriculaAlunoController {
     public void atualizarNotas(@PathVariable Long idMatricula, @RequestBody AtualizarNotasRequestDTO atualizarNotasRequestDTO) {
         matriculaAlunoService.atualizarNotas(idMatricula, atualizarNotasRequestDTO);
     }
-
+    
 
 }
