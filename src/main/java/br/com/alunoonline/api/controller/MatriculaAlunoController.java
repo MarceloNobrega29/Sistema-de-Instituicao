@@ -45,6 +45,11 @@ public class MatriculaAlunoController {
     public void atualizarNotas(@PathVariable Long idMatricula, @RequestBody AtualizarNotasRequestDTO atualizarNotasRequestDTO) {
         matriculaAlunoService.atualizarNotas(idMatricula, atualizarNotasRequestDTO);
     }
-    
+
+    @GetMapping("/emitir-historico/{idAluno}")
+    @ResponseStatus(HttpStatus.OK)
+    public HistoricoAlunoResponseDTO emitirHistorico(@PathVariable Long idAluno) {
+        return matriculaAlunoService.emitirHistorico(idAluno);
+    }
 
 }
