@@ -4,7 +4,6 @@ import br.com.alunoonline.api.dtos.AtualizarNotasRequestDTO;
 import br.com.alunoonline.api.dtos.DisiciplinasAlunoResponseDTO;
 import br.com.alunoonline.api.dtos.HistoricoAlunoResponseDTO;
 import br.com.alunoonline.api.enuns.MatriculaAlunoStatusEnum;
-import br.com.alunoonline.api.model.DisciplinaModel;
 import br.com.alunoonline.api.model.MatriculaAlunoModel;
 import br.com.alunoonline.api.repository.MatriculaAlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class MatriculaAlunoService {
@@ -44,7 +42,6 @@ public class MatriculaAlunoService {
         } else {
             throw  new ResponseStatusException(HttpStatus.BAD_REQUEST, "Só é possivel trancar com o estatus MATRICULADO.");
         }
-
     }
 
     public void atualizarNotas(Long matriculaAlunoId, AtualizarNotasRequestDTO atualizarNotasRequestDTO) {
@@ -114,5 +111,4 @@ public class MatriculaAlunoService {
         return (nota1 != null && nota2 != null) ? (nota1 + nota2) / QTD_NOTAS : null;
 
     }
-
 }

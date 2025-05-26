@@ -44,5 +44,4 @@ public class DisciplinaService {
     public List<DisciplinaModel> listarDisciplinasDoProf(Long idProfessor) {
         return disciplinaRepository.findByProfessorModel_IdProfessor(idProfessor);
     }
-    
 }

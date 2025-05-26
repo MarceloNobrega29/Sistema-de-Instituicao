@@ -41,5 +41,4 @@ public class AlunoService {
     public List<AlunoModel> listarTodosAlunos() {
         return alunoRepository.findAll();
     }
-
 }

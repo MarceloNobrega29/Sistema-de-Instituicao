@@ -41,5 +41,4 @@ public class ProfessorService {
     public List<ProfessorModel> listarTodosProfessores() {
         return professorRepository.findAll();
     }
-
 }
