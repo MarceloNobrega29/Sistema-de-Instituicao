@@ -40,5 +40,9 @@ public class DisciplinaService {
     public List<DisciplinaModel> listarTodasDisciplinas() {
         return disciplinaRepository.findAll();
     }
+
+    public List<DisciplinaModel> listarDisciplinasDoProf(Long idProfessor) {
+        return disciplinaRepository.findByProfessorModel_IdProfessor(idProfessor);
+    }
     
 }

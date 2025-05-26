@@ -63,4 +63,10 @@ public class DisciplinaController {
         return disciplinaService.listarTodasDisciplinas();
     }
 
+    @GetMapping("/professor/{idProfessor}")
+    @ResponseStatus(HttpStatus.OK)
+    List<DisciplinaModel> listarDisciplinasDoProf(@PathVariable Long idProfessor) {
+        return disciplinaService.listarDisciplinasDoProf(idProfessor);
+    }
+
 }
