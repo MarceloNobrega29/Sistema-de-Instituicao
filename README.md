@@ -86,7 +86,28 @@ API REST desenvolvida com **Spring Boot**, responsável por gerenciar Professore
 
 ---
 
-## 🧪 Testes e Documentação
+## 💾 Backup do Banco de Dados
+
+Este projeto inclui um arquivo de backup do banco de dados PostgreSQL chamado `backup_postgres_aluno_online_p3b.sql`, que contém:
+
+- 🏗️ Criação das tabelas
+- 📥 Inserção dos dados iniciais
+- 🔑 Chaves primárias e estrangeiras
+- 🔄 Sequências para IDs auto incrementais
+
+### 🚀 Como restaurar o banco de dados
+
+Para importar o banco de dados usando o arquivo de backup, siga estes passos:
+
+1. ✅ Certifique-se que o PostgreSQL está rodando e você tem um banco vazio com o nome `postgres_aluno_online_p3b`.
+2. 🖥️ Execute o comando (no terminal ou via ferramenta de administração como CloudBeaver):
+
+```bash
+psql -U postgres -d postgres_aluno_online_p3b -f backup_postgres_aluno_online_p3b.sql
+```
+---
+
+## 🧪 Documentação
 
 A documentação da API está disponível via **Swagger UI** ao rodar o projeto:
 
