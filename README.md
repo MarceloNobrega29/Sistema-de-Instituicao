@@ -1,72 +1,91 @@
-# 📚 Projeto Aluno Online (CRUD)
+# 📚 Sistema de Gestão Acadêmica - API REST
 
-![Image](https://github.com/user-attachments/assets/e51759e2-2baf-4bb1-beca-2a9e8cca3fca)
+API REST desenvolvida com **Spring Boot**, responsável por gerenciar Professores, Alunos, Disciplinas e Matrículas em um sistema acadêmico.
 
-![Image](https://github.com/user-attachments/assets/d0f64b1f-9863-47aa-a92d-f8648b01ff5a)
+---
 
-![Image](https://github.com/user-attachments/assets/cd554f6a-e438-43a9-9167-4dfb5e632d03)
+## 🚀 Tecnologias Utilizadas
+
+- Java 17+
+- Spring Boot
+- Spring Data JPA
+- PostgreSQL
+- Swagger
+- Maven
+- Insomnia/Postman
+- CloudBeaver
+
+---
+
+## 📌 Principais Funcionalidades
+
+- Cadastro e gerenciamento de **professores**, **alunos** e **disciplinas**
+- Controle de **matrículas**, incluindo trancamento e atualização de notas
+- Emissão de **histórico escolar**
+- Documentação automática da API com **Swagger**
+
+---
+
+## 🧩 Endpoints Principais
+
+### 👨‍🏫 Professores
+
+| Método | Endpoint                    | Descrição                         |
+|--------|-----------------------------|-----------------------------------|
+| GET    | `/professores`             | Listar todos os professores       |
+| GET    | `/professores/{id}`        | Buscar professor por ID           |
+| POST   | `/professores`             | Cadastrar novo professor          |
+| PUT    | `/professores/{id}`        | Atualizar dados do professor      |
+| DELETE | `/professores/{id}`        | Remover professor                 |
+
+### 📘 Disciplinas
+
+| Método | Endpoint                             | Descrição                                |
+|--------|--------------------------------------|------------------------------------------|
+| GET    | `/disciplinas`                      | Listar todas as disciplinas              |
+| GET    | `/disciplinas/{id}`                 | Buscar disciplina por ID                 |
+| GET    | `/disciplinas/professor/{id}`       | Disciplinas associadas a um professor    |
+| POST   | `/disciplinas`                      | Criar nova disciplina                    |
+| PUT    | `/disciplinas/{id}`                 | Atualizar disciplina                     |
+| DELETE | `/disciplinas/{id}`                 | Excluir disciplina                       |
+
+### 🎓 Alunos
+
+| Método | Endpoint               | Descrição                    |
+|--------|------------------------|------------------------------|
+| GET    | `/alunos`             | Listar todos os alunos       |
+| GET    | `/alunos/{id}`        | Buscar aluno por ID          |
+| POST   | `/alunos`             | Cadastrar novo aluno         |
+| PUT    | `/alunos/{id}`        | Atualizar aluno              |
+| DELETE | `/alunos/{id}`        | Remover aluno                |
+
+### 📝 Matrículas
+
+| Método | Endpoint                                 | Descrição                          |
+|--------|------------------------------------------|------------------------------------|
+| POST   | `/matriculas`                           | Criar matrícula                    |
+| PATCH  | `/matriculas/trancar/{id}`              | Trancar matrícula                  |
+| PATCH  | `/matriculas/atualizar-notas/{id}`      | Atualizar notas                    |
+| GET    | `/matriculas/emitir-historico/{id}`     | Emitir histórico do aluno          |
+
+---
+
+## 📦 Estrutura de Dados (Modelos)
+
+- **ProfessorModel**: `id`, `nome`, `cpf`, `email`
+- **AlunoModel**: `id`, `nome`, `cpf`, `email`
+- **DisciplinaModel**: `id`, `nome`, `cargaHoraria`, `professor`
+- **MatriculaAlunoModel**: `id`, `nota1`, `nota2`, `status`, `disciplina`, `aluno`
+
+---
+
+## 🧪 Testes e Documentação
+
+A documentação da API está disponível via **Swagger UI** ao rodar o projeto:
+
+http://localhost:8080/swagger-ui/index.html
 
 
+---
 
-Este repositório contém uma API RESTful para gerenciamento de alunos, desenvolvida em **Spring Boot** com operações CRUD.
-
-## 🛠 Tecnologias Utilizadas
-- **Java 17**
-- **Spring Boot 3.x**
-- **Spring Data JPA**
-- **PostgreSQL** (ou outro banco de dados configurável)
-- **Maven** (gerenciamento de dependências)
-- **Insomnia/Postman** (testes de API)
-- **CloudBeaver** (gerenciamento do banco de dados)
-
-## 📌 Endpoints Implementados
-
-### 🔹 Criar Aluno (`POST /alunos`)
-Cria um novo alunoModel no banco de dados.
-
-### 🔎 Buscar Aluno por ID (GET /alunos/{id})
-Retorna um alunoModel específico pelo ID.
-
-### ✏️ Atualizar Aluno (PUT /alunos/{id})
-Atualiza os dados de um alunoModel existente.
-
-### 🗑️ Deletar Aluno (DELETE /alunos/{id})
-Remove um alunoModel do sistema.
-
-#### Request (Postman):
-
-**Método:** POST  
-**URL:** `http://localhost:8080/alunos`  
-
-**Método:** PUT  
-**URL:** `http://localhost:8080/alunos/:id`
-
-**Método:** GET  
-**URL:** `http://localhost:8080/alunos/:id`
-
-**Método:** DELETE  
-**URL:** `http://localhost:8080/alunos/:id`
-
-# 🚀 Como Executar o Projeto
-
-## Pré-requisitos:
-
-- **JDK 17**
-
-- **Maven 3.8+**
-
-- **Docker (para o CloudBeaver)**
-
-# Clone o repositório:
-
-- git clone https://github.com/seu-usuario/alunoModel-online.git
-
-# Configure o banco de dados:
-
-- Edite src/main/resources/application.properties:
-
-### properties
-#### Copy
-#### spring.datasource.url=jdbc:postgresql://localhost:5432/postgres_aluno_online_p3b
-#### spring.datasource.username=seu-user
-#### spring.datasource.password=sua-senha 
+## MIT License - Copyright (c) 2025 Marcelo Nóbrega
