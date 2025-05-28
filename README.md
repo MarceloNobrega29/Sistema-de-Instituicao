@@ -26,6 +26,13 @@ API REST desenvolvida com **Spring Boot**, responsável por gerenciar Professore
 
 ---
 
+## 📡 Testando a API
+
+- **Importe a collection no Insomnia:** 
+[📥 insomnia_collection.json](./insomnia_collection.json)
+
+---
+
 ## 🧩 Endpoints Principais
 
 ### 👨‍🏫 Professores
