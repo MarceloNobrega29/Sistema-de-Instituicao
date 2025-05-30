@@ -50,5 +50,4 @@ public class AlunoController {
         public List<AlunoModel> listarTodosAlunos() {
                 return alunoService.listarTodosAlunos();
         }
-
 }
