@@ -30,7 +30,7 @@ API REST desenvolvida com **Spring Boot**, responsável por gerenciar Professore
 
 - **Importe a collection no Insomnia:** 
 [insomnia_collection](../../../../Downloads/insomnia_collection)
-- **Importe a collection no Insomnia:**
+- **Importe a collection no Postman:**
   [postman_collection.json](postman_collection.json)
 
 ---
